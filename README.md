@@ -1,12 +1,13 @@
 <p align="center">
-<img src="../Bazaroo/img/logo.svg" />
+<img src="https://raw.githubusercontent.com/WathTheone/Bazaroo/main/img/logo.svg" />
 </p>
 
-<h1 align="center">Bazaroo</h1>
+<h1></h1>
 
 <p align="center">
-<img src="../Bazaroo/img/readme.jpg"/>
-## ✨ Demo
+<img src="https://raw.githubusercontent.com/WathTheone/Bazaroo/main/img/readme.jpg"/>
+
+[## ✨ Demo]()
 
 `readme-md-generator` is able to read your environment (package.json, git config...) to suggest you default answers during the `README.md` creation process:
 
