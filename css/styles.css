@@ -1,0 +1,402 @@
+
+/* FONTS */
+@font-face {
+  font-family: 'droid_sansregular';
+  src: url('../fonts/droidsans-webfont.woff2') format('woff2'),
+       url('../fonts/droidsans-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'droid_sansbold';
+  src: url('../fonts/droidsans-bold-webfont.woff2') format('woff2'),
+       url('../fonts/droidsans-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'droid_sansregular',Arial, sans-serif!important;
+  font-weight:normal;
+  font-style:normal;
+}
+
+
+/* FONTS END */
+
+
+/* NAVBAR */
+#logo {
+  padding-left: 5%;
+}
+
+#asset1 {
+  position: relative;
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#menu_row a {
+  padding: 0.58vw 0;
+  font-size:1.40vw;
+  line-height: 1.64vw;
+  font-weight: 400;
+}
+
+
+#menu_icon {
+  width: 5vw;
+  height: 5vw;
+}
+.menu_rectangle {
+  max-width: 10.72vw;
+  max-height: 3.1vw;
+  margin-right: 1.58vw;
+  margin-left:3.04vw;
+  background: #272A45;
+  border-radius: 1.75vw;
+  color:white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+img {
+  height: auto;
+}
+
+#navbar .row {
+  --bs-gutter-x: 0!important;
+}
+
+/* NAVBAR END */
+
+/* HOME TEXT ROW */
+
+#text_row1 {
+  padding-right: 5vw;
+  padding-left:12.41vw;
+}
+
+@media only screen and (max-width: 767px) {
+  #text_row1 {
+    text-align: center;
+    padding-top: 10vw;
+    padding-right: 32.5vw;
+    padding-left: 32.5vw;
+    padding-bottom: 10vw;
+
+    
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #text_row2 {
+    padding-right: 0!important;
+  }
+}
+
+/* HOME TEXT ROW END */
+
+/* PRESENTATION IMAGE */
+
+@media only screen and (max-width: 767px) {
+  #asset5_1 {
+    padding-right: 20vw;
+    padding-left:20vw;
+  }
+}
+
+/* PRESENTATION IMAGE END */
+
+/* STACKED TEXTBOX WINDOW */
+.main-rectangle {
+  position: absolute;
+  background: linear-gradient(180deg, #B3F3FF 0%, #AEC5FF 100%);
+  border-radius: 2.34vw;
+  width: 70.94vw;
+  height: 28.64vw;
+  z-index: 0; 
+} 
+.stacked-rect {
+  z-index: 1;
+  position: relative; 
+  margin-top: 3.45vw;
+  margin-left: 3.86vw;
+  background: #272A45;
+}  
+/* STACKED TEXTBOX END */
+
+
+/* BUTTON STYLE */
+
+.apply-button {
+  width: 13.59vw;
+  height: 3.86vw;
+  color:#000000;
+  background: linear-gradient(180deg, #AFD0FF 0%, #B2EEFF 99.99%, rgba(175, 209, 255, 0) 100%);
+  border-radius: 1.75vw;
+  margin-top: 2vw ;
+  text-align: center;
+
+}
+
+/* BUTTON STYLE END */
+
+
+/* CAROUSEL REVIEWS */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.review {
+  width: 31.51vw;
+  height:27.06vw;
+  background: linear-gradient(180deg, #B1E0FF 17.19%, #AEC0FF 71.35%) !important;
+  border-radius: 2.34vw;
+}
+
+
+.review_margin {
+  margin-top:2vw;
+  margin-left:2vw;
+}
+
+@media only screen and (max-width: 576px) {
+  .review_margin {
+    margin-top:2vw;
+    margin-left:0vw;
+  }
+}
+
+#asset1_10 {
+  width:3.98vw;
+  height: 4.45vw;
+} 
+
+.swiper-button-next {
+  width: 3.80vw!important;
+  height: 5.38vw!important;
+  margin-right:3vw;
+  background-image: url(../img/rightarrow.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after  {
+  display: none;
+}
+
+.swiper-button-prev {
+  width: 3.80vw!important;
+  height: 5.38vw!important;
+  margin-left:3vw;
+  background-image: url(../img/leftarrow.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+/* CAROUSEL REVIEWS END */
+
+/* CONTACT */
+#contactimg{
+  width:70vw;
+  height:auto;
+  opacity: 0.12;
+}
+
+#contactform {
+  width:50%;
+}
+
+@media only screen and (max-width: 576px) {
+  #contactform {
+    width:100%;
+  }
+}
+
+
+.card {
+  border: 0;
+}
+
+/* CONTACT END */
+
+/* REGISTER MODAL */
+#regchoice {
+  border-radius: 2.34vw;
+  width: 13.12vw;
+  height: auto;
+  float: right;
+  margin-bottom: 1vw;
+}
+@media only screen and (max-width: 768px) {
+  #regchoice {
+    font-size: 2vw;
+    border-radius: 2.34vw;
+    width: 25.12vw;
+    height: auto;
+    float: right;
+    margin-bottom: 1vw;
+  }
+}
+
+/* REGISTER MODAL END */
+
+/* FOOTER*/
+#footerimg {
+  transform: scale(-1, -1);
+  width: 100%;
+  height: auto;
+}
+
+.footer-icon {
+  width: 3.51vw;
+}
+
+.footer .row {
+  --bs-gutter-x: 0!important;
+}
+
+.footer {
+  margin-top:15vw;
+}
+
+@media only screen and (max-width: 576px) {
+  .footer {
+    margin-top:30vw;
+  }
+}
+/* FOOTER END */
+
+
+/* ALERT */
+.swal2-title {
+  margin: 0px;
+  font-size: 2vw!important;
+}
+
+
+/* ALERT END */
+
+
+/* MEDITATII PAGE */
+
+.meditatii_rectangle {
+  padding: 1vw,2vw;
+  height:8.26vw;
+  width: 75%;
+  align-self: center;
+  background: linear-gradient(180deg, #B1E0FF 17.19%, #AEC0FF 71.35%);
+  border-radius: 2.34vw;
+}
+
+/* MEDATII PAGE END */
+
+
+
+/* CUSTOM STYLE */
+
+.container-fluid {
+  padding:0!important;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  padding:0!important
+}
+
+a:link, a:visited, a:hover, a:active { color: #FFFFFF;
+  text-decoration: none;
+}
+
+/*  TO DO */
+@media only screen and (max-width: 767px) {
+  .card-img-overlay {
+    padding:0.93vw;
+    
+  }
+}
+
+.btn {
+  padding:0;
+  border:0;
+}
+h1 {
+  font-size: 2.81vw;
+  line-height: 3.28vw;
+}
+h2 {
+  font-size: 2vw;
+  line-height: 2.47vw;
+}
+
+h3{
+  font-size: 1.40vw;
+  line-height: 1.64vw;
+}
+
+p{
+  font-size:  0.93vw;
+}
+
+.padtext {
+  padding-top:3vw;
+  padding-left:4vw;
+  padding-right:4vw;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.mb-3{
+  margin-bottom:0.93vw!important;
+}
+
+.form-label{
+  margin-bottom:0!important;
+  margin:0;
+}
+input, textarea {
+  font-size:1.5vw!important;
+  line-height: 1.32vw;
+  width:36.20vw;
+  margin:0;
+  padding:0;
+}
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <!-- Meta tags -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/gif/png" href="../img/logo.svg">
+
+   <!-- CSS BOOTSTRAP -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+   <!-- PERSONAL CSS -->
+   <link rel="stylesheet" href="../css/styles.css">
+
+   <!-- Swiper CSS -->
+   <link rel="stylesheet" href="../css/swiper.min.css" />
+
+   <title>Înrolări</title>
+</head>
+
+<body>
+
+   <div class="container-fluid no-gutters">
+      <!-- NAVBAR -->
+      <div class="row">
+         <!-- LOGO -->
+         <div class="col-6 d-flex flex-row" id="logo">
+            <img class="img-fluid w-50 d-inline-block d-flex align-self-center" src="../img/logo.svg">
+         </div>
+         <!-- MENU -->
+         <div class="col-6 d-flex flex-row-reverse" id="asset1">
+            <!-- BACKGROUND MENU -->
+            <img class="img-fluid w-100 d-inline-block" src="../img/Asset 6 2.svg" alt="Asset 5 2">
+            <div class="card-img-overlay d-flex justify-content-end">
+               <!-- COLLAPSE MENU(MOBILE) -->
+               <!-- TO DO HREF-->
+               <a class="btn d-lg-none" id="menu_icon" data-bs-toggle="collapse" href="#menu" role="button"
+                  aria-expanded="false" aria-controls="menu">
+                  <img class="img-fluid" src="../img/menu_icon.svg">
+               </a>
+               <!-- TO DO COLLAPSE BACKGROUND & HIDE THE BUTTON transsform in button-->
+               <div class="collapse d-lg-none" id="menu" style="background: #272A45; color:#FFFFFF">
+
+               </div>
+               <!-- MENU LIST(DESKTOP) -->
+
+               <div class="row w-100 h-100 d-flex justify-content-evenly d-none d-lg-inline-flex" id="menu_row">
+  
+               </div>
+            </div>
+            </img>
+         </div>
+      </div>
+   </div>
+
+
+   <!-- HERE WE ADD THE enrollments -->
+   <div id = "enrollments" class="container-fluid d-flex justify-content-center" style="margin-top:10vw;"> 
+       
+   </div>
+
+
+      <div class="container-fluid">
+         <footer class="footer">
+            <div class="row">
+               <div class="col-6">
+                  <img class="img-fluid" id="footerimg" src="../img/Asset 6 2.svg">
+               </div>
+               <div class="col-6 d-flex justify-content-end align-items-end">
+                  <a href="https://www.facebook.com/LsacBucuresti/" target="_blank"><img class="footer-icon"
+                        src="../img/icon_facebook.svg"></a>
+                  <a href="https://www.instagram.com/lsacbucuresti/" target="_blank"><img class="footer-icon"
+                        src="../img/icon_instagram.svg"></a>
+                  <a href="#" target="_blank"><img class="footer-icon" src="../img/icon_twitter.svg"></a>
+               </div>
+            </div>
+         </footer>
+      </div>
+
+
+      <!-- JQUERY -->
+      <script src="../js/jquery-3.6.0.min.js"></script>
+
+      <!-- BOOTSTRAP SCRIPT -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+         crossorigin="anonymous"></script>
+
+      <!-- Swiper SCRIPT -->
+      <script src="../js/swiper.min.js"></script>
+
+      <!-- SweetAlert -->
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+      <!-- CUSTOM SCRIPT -->
+      <script src="../js/token.js"></script>
+      <script src="../js/inrolari.js"></script>
+
+</body>
+
+</html>

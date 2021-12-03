@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/gif/png" href="../img/logo.svg">
+
+    <!-- CSS BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- PERSONAL CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="../css/swiper.min.css" />
+
+    <title>Bazaroo</title>
+</head>
+
+<body>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background: #272A45; color:#FFFFFF">
+                <div class="modal-header d-flex justify-content-center" style="border:0;">
+                    <h2 class="modal-title text-center w-100" id="LoginModal">Login</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="login">
+                        <div class="mb-3">
+                            <label for="LoginEmail" class="form-label">
+                                <h3>Email</h3>
+                            </label>
+                            <input type="email" class="form-control" id="LoginEmail"
+                                placeholder="student@stud.upb.ro/prof@onmicrosoft.upb.ro">
+                        </div>
+                        <div class="mb-3">
+                            <label for="LoginPw" class="form-label">
+                                <h3>Parolă</h3>
+                            </label>
+                            <input type="password" class="form-control" id="LoginPw">
+                        </div>
+                        <div class="mb-3">
+                            <a data-bs-target="#RegisterModal" data-bs-toggle="modal" data-bs-dismiss="modal"
+                                role="button">
+                                <h3>Nu ai cont?<br>înregistrează-te</h3>
+                            </a>
+                        </div>
+                        <button type="sumbit" onclick="logSubmit()"
+                            class="btn btn-primary d-grid gap-2 col-4 mx-auto responsive-width apply-button align-items-center">
+                            <h3>Conectare</h3>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="RegisterModal" tabindex="-1" aria-labelledby="RegisterModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background: #272A45; color:#FFFFFF">
+                <div class="modal-header d-flex justify-content-center" style="border:0;">
+                    <h2 class="modal-title text-center w-100" id="RegisterModal">Register</h2>
+                    <button type="button" class="btn-close white" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+                    <form id="signup">
+                        <select id="regchoice" class="form-select" aria-label="Student">
+                            <option value="student" selected>Student</option>
+                            <option value="teacher">Profesor</option>
+                        </select>
+                        <div class="mb-3">
+                            <label for="RegFName" class="form-label">
+                                <h3>Nume</h3>
+                            </label>
+                            <input type="text" class="form-control" id="RegFName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="RegSName" class="form-label">
+                                <h3>Prenume</h3>
+                            </label>
+                            <input type="text" class="form-control" id="RegSName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="RegEmail" class="form-label">
+                                <h3>Email</h3>
+                            </label>
+                            <input type="email" class="form-control" id="RegEmail"
+                                placeholder="student@stud.upb.ro/prof@onmicrosoft.upb.ro">
+                        </div>
+                        <div class="mb-3">
+                            <label for="RegPw" class="form-label">
+                                <h3>Parolă</h3>
+                            </label>
+                            <input title="Eight or more characters" type="password" class="form-control" id="RegPw">
+                        </div>
+                        <div class="mb-3">
+                            <label for="RegConfirmPw" class="form-label">
+                                <h3>Confirmare parolă</h3>
+                            </label>
+                            <input title="Eight or more characters" type="password" class="form-control"
+                                id="RegConfirmPw">
+                        </div>
+                        <button type="sumbit" onclick="regSubmit()"
+                            class="btn btn-primary d-grid gap-2 col-4 mx-auto responsive-width apply-button align-items-center">
+                            <h3>Conectare</h3>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid no-gutters">
+        <!-- NAVBAR -->
+        <div class="row">
+            <!-- LOGO -->
+            <div class="col-6 d-flex flex-row" id="logo">
+                <img class="img-fluid w-50 d-inline-block d-flex align-self-center" src="../img/logo.svg">
+            </div>
+            <!-- MENU -->
+            <div class="col-6 d-flex flex-row-reverse" id="asset1">
+                <!-- BACKGROUND MENU -->
+                <img class="img-fluid w-100 d-inline-block" src="../img/Asset 6 2.svg" alt="Asset 5 2">
+                <div class="card-img-overlay d-flex justify-content-end">
+
+                    <!-- COLLAPSE MENU(MOBILE) -->
+                    <a class="btn d-lg-none" id="menu_icon" data-bs-toggle="collapse" href="#menu" role="button"
+                        aria-expanded="false" aria-controls="menu">
+                        <img class="img-fluid" src="../img/menu_icon.svg">
+                    </a>
+
+                    <div class="collapse d-lg-none" id="menu" style="background: #272A45; color:#FFFFFF">
+                        <a data-bs-toggle="modal" data-bs-target="#LoginModal" role="button">
+                            <h3>Logare</h3>
+                        </a>
+                        <a data-bs-toggle="modal" data-bs-target="#RegisterModal" role="button">
+                            <h3>Creare cont</h3>
+                        </a>
+                        <a href="#contact">
+                            <h3>Contact</h3>
+                        </a>
+                    </div>
+
+                    <!-- MENU LIST(DESKTOP) -->
+                    <div class="row w-100 h-100 d-flex justify-content-evenly d-none d-lg-inline-flex" id="menu_row">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#LoginModal"
+                            class="btn btn-primary d-grid gap-2 col-4 mx-auto responsive-width align-items-center menu_rectangle">
+                            <h3>Logare</h3>
+                        </button>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#RegisterModal"
+                            class="btn btn-primary d-grid gap-2 col-4 mx-auto responsive-width align-items-center menu_rectangle">
+                            <h3>Creare cont</h3>
+                        </button>
+                        <button type="button" onclick="location.href='#contact';" value="Go to Contact"
+                            class="btn btn-primary d-grid gap-2 col-4 mx-auto responsive-width align-items-center menu_rectangle">
+                            <h3>Contact</h3>
+                        </button>
+                    </div>
+                </div>
+                </img>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <!-- TEXTBOX & PRESENTATION IMAGE-->
+        <div class="row">
+            <!-- TEXTBOX -->
+            <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+                <blockquote class="blockquote text-left" id="text_row1">
+                    <h1>
+                        Învățatul nu a fost niciodată mai simplu!
+                    </h1>
+                    <h2 id="text_row2" style="padding-right: 4vw;">
+                        Platforma ideală pentru meditații online, atât pentru profesori, cât și pentru studenți.
+                    </h2>
+                </blockquote>
+            </div>
+            <!-- PRESENTATION IMAGE -->
+            <div class="col-md-6 col-sm-12 d-flex justify-content-center">
+                <img class="img-fluid d-inline-block" id="asset5_1" src="../img/Asset 5 1.svg" alt="asset_5_1">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <!-- STACKED WINDOW -->
+        <div class="d-flex justify-content-center align-items-center" style="margin-top: 7vw;">
+            <div class="main-rectangle"></div>
+            <div class="main-rectangle stacked-rect">
+                <div class="row d-flex text-center d-flex justify-content-between">
+                    <!-- FIRST ROW -->
+                    <h1 class="col-12 padtext" style="color:#FFFFFF">
+                        Cum funcționează ?
+                    </h1>
+                    <!-- SECOND ROW -->
+                    <h2 class="col-6 padtext" style="color:#FFFFFF">
+                        Știi prea multe si vrei să predai? Înscrie-te ca profesor.
+                    </h2>
+                    <h2 class="col-6 padtext" style="color:#FFFFFF">
+                        Știi prea puține si vrei să înveți? Înscrie-te ca student.
+                    </h2>
+                    <!-- THIRD ROW ( BUTTONS ) -->
+                    <div class="col-6">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#RegisterModal"
+                            class="btn btn-primary d-grid gap-2 col-4 mx-auto responsive-width apply-button align-items-center">
+                            <h3>Predau</h3>
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#RegisterModal"
+                            class="btn btn-primary d-grid gap-2 col-4 mx-auto responsive-width apply-button align-items-center">
+                            <h3>Învăț</h3>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="container-fluid" style="padding:10vw!important;padding-bottom:2.5vw!important">
+        <div class="row">
+            <h2 class="d-xs-block d-sm-block d-md-none d-xl-none d-xxl-none" style="padding-left:25vw;">
+                Păreri
+            </h2>
+            <h2 class="d-none d-md-block d-xl-block d-xxl-block">
+                Ce zic utilizatorii?
+            </h2>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="swiper mySwiper">
+            <div id="reviewcarousel" class="swiper-wrapper">
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+
+    <div id="contact" class="container-fluid d-flex justify-content-center" style="margin-top:10vw;">
+        <div class="card">
+            <img id="contactimg" src="../img/contact.svg" class="card-img" alt="...">
+            <div class="container-fluid card-img-overlay">
+                <h1 class="card-title text-center">Întâmpini dificultăți ?<br> Contactează-ne!</h1>
+                <div class="row d-flex justify-content-center">
+                    <form id="contactform">
+                        <div class="mb-3">
+                            <label for="ContactName" class="form-label">
+                                <h3>Nume</h3>
+                            </label>
+                            <input type="text" class="form-control" id="ContactName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="ContactEmail" class="form-label">
+                                <h3>Email</h3>
+                            </label>
+                            <input type="email" class="form-control" id="ContactEmail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="ContactText">
+                                <h3>Mesaj</h3>
+                            </label>
+                            <textarea class="form-control" id="ContactText" rows="3"></textarea>
+                        </div>
+                        <button type="sumbit" onclick="contactSubmit()"
+                            class="btn btn-primary d-grid gap-2 col-4 mx-auto responsive-width apply-button align-items-center">
+                            <h3>Trimite</h3>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <footer class="footer">
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid" id="footerimg" src="../img/Asset 6 2.svg">
+                </div>
+                <div class="col-6 d-flex justify-content-end align-items-end">
+                    <a href="https://www.facebook.com/LsacBucuresti/" target="_blank"><img class="footer-icon"
+                            src="../img/icon_facebook.svg"></a>
+                    <a href="https://www.instagram.com/lsacbucuresti/" target="_blank"><img class="footer-icon"
+                            src="../img/icon_instagram.svg"></a>
+                    <a href="https://twitter.com/lsacbucuresti" target="_blank"><img class="footer-icon"
+                            src="../img/icon_twitter.svg"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+    <!-- JQUERY -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+
+    <!-- BOOTSTRAP SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper SCRIPT -->
+    <script src="../js/swiper.min.js"></script>
+
+    <!-- SweetAlert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- CUSTOM SCRIPT -->
+    <script src="../js/token.js"></script>
+    <script src="../js/index.js"></script>
+
+</body>
+
+</html>
